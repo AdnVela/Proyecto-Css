@@ -1,0 +1,170 @@
+body {
+	margin: 10px;
+	background:#02010a;
+
+}
+header{
+	animation: cambio 10s ;
+	width: 99%;
+	overflow: hidden;
+	background: #5b7989;
+	margin-bottom: 20px;
+	border-radius: 10px;
+}
+.wrapper{
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+	overflow: hidden;
+}
+header .logo{
+	color: white;
+	text-shadow: 2px 2px #02010a;
+	font-size: 40px;
+	line-height: 100px;
+	float: left;
+}
+header nav{
+	float: right;
+	line-height: 100px;
+}
+header nav a{
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 20px;
+
+}
+
+#contenido {
+	display: flex;
+	flex-direction: column;
+}
+
+#bloque1 {
+	background-color: #82c3a6;
+}
+
+#bloque2 {
+	background-color: #d5c75f;
+}
+#bloque3 {
+	background-color: #d5c75f;
+}
+
+footer {
+	margin-top: 10px;
+	background: #C6d5c5;
+	font-family: Dancing Script;
+	font-size: 15px;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	border-radius: 0 0 10px 10px;
+}
+footer strong{
+	text-decoration-line: underline;
+	font-size: 25px;
+}
+footer p{
+	text-align: center;
+	padding: 10px;
+	margin: 10px;
+	width: 22%;
+}
+footer img{
+	width: 5%;
+}
+
+.contenedor {
+	display: flex;
+	flex-direction: row;
+}
+
+
+#bloque1 .contenedor > div {
+	text-align: center;
+	padding: 10px;
+	margin: 10px;
+	
+	width: 100%;
+}
+
+#bloque2 .contenedor > div {
+	text-align: center;
+	padding: 10px;
+	margin: 5px;
+	
+	width: 50%;
+}
+.imagen1 img{
+	box-shadow: 2px 2px #180101;
+	width: 70%;
+	
+}
+.imagen2 img{
+	width: 99%;
+	color: #82c3a6;
+	border: 2px;
+	transition-property: rotate(10deg);
+	transition: 1s;
+}
+.imagen2 :hover{
+	transform: rotateZ(10deg);
+	box-shadow: 3px 3px 0 0 #82c3a6;
+}
+.imagen3 img{
+	width: 88%;
+	transition-property: translateX(20px) translateY(-5px);
+	transition: 1s;
+
+}
+.imagen3 :hover{
+	transform: translateX(20px) translateY(-5px);;
+	box-shadow: 3px 3px 0 0 #82c3a6;
+}
+
+@keyframes cambio{
+	0% { margin-top: 150%; }
+	60% { margin-top:  -5%; }
+	100% { margin-top:  0%; }
+}
+@media screen and (min-width: 400px) {
+
+	#bloque2 .contenedor {
+		display: flex;
+		flex-direction: column;
+	}
+	 .contenedor .imagen2, .imagen3 {
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+	}
+	footer{
+		display: flex;
+		flex-direction: column;
+	}
+	footer strong, p{
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+	
+}
+@media screen and (min-width: 800px) {
+
+	#bloque2 .contenedor {
+		display: flex;
+		flex-direction: row;
+	}
+	footer{
+		display: flex;
+		flex-direction: row;
+	}
+	footer strong, p{
+		
+		justify-content: center;
+		align-items: center;
+	}
+}
+
